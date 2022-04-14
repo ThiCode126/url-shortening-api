@@ -1,0 +1,27 @@
+.content-wrapper {
+  width: 327px;
+  margin: 0 auto;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  .content-wrapper {
+    width: 688px;
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  .content-wrapper {
+    width: 1110px;
+  }
+}
