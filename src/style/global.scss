@@ -1,19 +1,16 @@
-.content-wrapper {
-  width: 327px;
-  margin: 0 auto;
-}
-
 body {
-  color: var(--white);
-  background-color: var(--dark);
-}
+  background-color: var(--white);
+  color: var(--dark);
+  font-family: "Poppins", sans-serif;
 
-/**
-* ? Tablet
-*/
-@media (min-width: 768px) {
-  .content-wrapper {
-    width: 688px;
+  #root {
+    width: 100vw;
+    min-width: 375px;
+    background-color: var(--light);
+    .cw {
+      width: 327px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -21,7 +18,12 @@ body {
 * ? DeskTop
 */
 @media (min-width: 1440px) {
-  .content-wrapper {
-    width: 1110px;
+  body {
+    #root {
+      min-width: 1440px;
+      .cw {
+        width: 1110px;
+      }
+    }
   }
 }

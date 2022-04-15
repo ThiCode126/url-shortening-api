@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from './components/header';
 import { getShortLink } from './utils/api';
 
 function App() {
@@ -41,15 +42,14 @@ function App() {
 
 
   return (
-    <section className="App">
-      <header className="App-header">
-        <h1>React App by ThiCode</h1>
-        <form onSubmit={(e) => handleSubmit(e)} >
-          <input type="text" value={link} onChange={(e) => setLink(e.target.value)} className="link" />
-          <button type="submit">Ajouter</button>
-        </form>
-      </header>
-    </section>
+    <>
+      <Header />
+
+      <form onSubmit={(e) => handleSubmit(e)} >
+        <input type="text" value={link} onChange={(e) => setLink(e.target.value)} className="link" />
+        <button type="submit">Ajouter</button>
+      </form>
+    </>
   );
 }
 
