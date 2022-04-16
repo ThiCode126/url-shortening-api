@@ -1,0 +1,68 @@
+#hero {
+  background-color: var(--white);
+  .cw {
+    padding-bottom: 168px;
+    .illustration {
+      img {
+        width: auto;
+        height: 270px;
+      }
+    }
+    .body-hero {
+      text-align: center;
+      padding-top: 37px;
+      h1 {
+        @include text(42px, 48px, -1.05px);
+        @include mY(0);
+      }
+      p {
+        @include text(18px, 30px, 0.122727px);
+        @include mY(15px, 32px);
+        color: var(--grey);
+      }
+      button {
+        background-color: var(--primary);
+        border-radius: 28px;
+        padding: 14px 40px 12px;
+        @include text(20px, 30px);
+        color: var(--white);
+        cursor: pointer;
+        &:hover {
+          background-color: var(--primary-hover);
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #hero {
+    // overflow: hidden;
+    .cw {
+      display: flex;
+      gap: 101px;
+      flex-direction: row-reverse;
+      padding-bottom: 152px;
+      .illustration {
+        margin-right: -290px;
+        img {
+          height: 482px;
+        }
+      }
+      .body-hero {
+        text-align: left;
+        padding: 0;
+        h1 {
+          @include text(80px, 90px, -2px);
+        }
+        p {
+          @include text(22px, 36px, 0.15px);
+          @include mY(5px, 38px);
+        }
+      }
+    }
+  }
+}

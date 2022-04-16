@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Header from './components/header';
+import Header from './components/Header';
+import Hero from './components/Hero';
 import { getShortLink } from './utils/api';
 
 function App() {
@@ -42,14 +43,15 @@ function App() {
 
 
   return (
-    <>
+    <div id="app-container">
       <Header />
+      <Hero />
 
       <form onSubmit={(e) => handleSubmit(e)} >
         <input type="text" value={link} onChange={(e) => setLink(e.target.value)} className="link" />
         <button type="submit">Ajouter</button>
       </form>
-    </>
+    </div>
   );
 }
 

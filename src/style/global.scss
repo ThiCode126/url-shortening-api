@@ -7,9 +7,14 @@ body {
     width: 100vw;
     min-width: 375px;
     background-color: var(--light);
-    .cw {
-      width: 327px;
+    #app-container {
+      width: 375px;
       margin: 0 auto;
+      overflow: hidden;
+      .cw {
+        width: 327px;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -21,8 +26,11 @@ body {
   body {
     #root {
       min-width: 1440px;
-      .cw {
-        width: 1110px;
+      #app-container {
+        width: 1440px;
+        .cw {
+          width: 1110px;
+        }
       }
     }
   }
