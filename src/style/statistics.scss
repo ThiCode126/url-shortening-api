@@ -1,0 +1,122 @@
+#statistics {
+  .cw {
+    .head {
+      text-align: center;
+      padding-bottom: 48px;
+      h2 {
+        @include mY(0);
+        font-weight: 700;
+        @include text(28px, 48px, -0.7px);
+      }
+      p {
+        @include mY(16px, 0);
+        @include text(16px, 28px, 0.109091px);
+        color: var(--grey);
+      }
+    }
+    .cards-stats {
+      padding-top: 44px;
+      margin-bottom: 80px;
+      .card {
+        position: relative;
+        background-color: var(--white);
+        border-radius: 5px;
+        text-align: center;
+        padding: 77px 32px 41px;
+
+        .bg-img {
+          position: absolute;
+          top: -44px;
+          left: calc(50% - 44px);
+          background-color: var(--dark-violet);
+          border-radius: 50%;
+          height: 88px;
+          width: 88px;
+          @include flexCenter;
+        }
+        h3 {
+          @include mY(0);
+          font-weight: 700;
+          @include text(22px, 33px);
+        }
+        p {
+          @include mY(12px, 0);
+          @include text(15px, 26px);
+          color: var(--grey);
+        }
+        &#brand,
+        &#records {
+          margin-bottom: 92px;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -48px;
+            left: calc(50% - 4px);
+            width: 8px;
+            height: 48px;
+            background-color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #statistics {
+    .cw {
+      .head {
+        width: 540px;
+        @include mX(auto);
+        padding-bottom: 56px;
+        h2 {
+          @include text(40px, 48px, -1px);
+        }
+        p {
+          @include mY(18px, 0);
+          @include text(18px, 32px, 0.122727px);
+        }
+      }
+      .cards-stats {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 120px;
+        .card {
+          text-align: left;
+          .bg-img {
+            left: 32px;
+          }
+          &#brand,
+          &#records {
+            margin-bottom: 0;
+            margin-right: 30px;
+            &::after {
+              left: auto;
+              right: -30px;
+              width: 30px;
+              height: 8px;
+              background-color: var(--primary);
+            }
+          }
+          &#brand {
+            &::after {
+              bottom: 107px;
+            }
+          }
+          &#records {
+            margin-top: 44px;
+            &::after {
+              bottom: 151px;
+            }
+          }
+          &#custom {
+            margin-top: 88px;
+          }
+        }
+      }
+    }
+  }
+}

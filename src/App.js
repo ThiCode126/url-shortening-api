@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Shorten from './components/Shorten';
+import Statistics from './components/Statistics';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <Hero />
       <Shorten />
+      <Statistics />
     </div>
   );
 }
