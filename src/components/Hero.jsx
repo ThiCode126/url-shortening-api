@@ -16,7 +16,7 @@ const Hero = () => {
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>
-          <button>Get Started</button>
+          <button className="btn-primary">Get Started</button>
         </div>
       </div>
     </section>

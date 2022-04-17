@@ -20,17 +20,6 @@
         @include mY(15px, 32px);
         color: var(--grey);
       }
-      button {
-        background-color: var(--primary);
-        border-radius: 28px;
-        padding: 14px 40px 12px;
-        @include text(20px, 30px);
-        color: var(--white);
-        cursor: pointer;
-        &:hover {
-          background-color: var(--primary-hover);
-        }
-      }
     }
   }
 }
