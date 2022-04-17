@@ -12,3 +12,18 @@ export const getShortLink = async (link) => {
 
   return dataRequest
 }
+
+export const defaultShorten = [
+  {
+    originalLink: "https://www.frontendmentor.io",
+    shortenLink: "https://rel.ink/k4lKyk",
+  },
+  {
+    originalLink: "https://twitter.com/frontendmentor",
+    shortenLink: "https://rel.ink/gxOXp9",
+  },
+  {
+    originalLink: "https://www.linkedin.com/company/frontend-mentor",
+    shortenLink: "https://rel.ink/gob3X9",
+  },
+]

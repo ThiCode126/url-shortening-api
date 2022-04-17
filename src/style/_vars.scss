@@ -3,10 +3,12 @@
   --dark-violet: #3a3054;
   --light-violet: #4b3f6b;
   --grey: #9e9aa8;
+  --grey025: #9e9aa83f;
   --light: #eff1f7;
   --white: #fff;
   --primary: #2bd0d0;
   --primary-hover: #9ae3e3;
+  --red-error: #f46363;
 }
 
 @mixin text($font, $line: $font, $ls: normal) {

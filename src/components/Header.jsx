@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -8,15 +8,25 @@ const Header = () => {
         <a href="/" className="link-nav brand">
           <img src="assets/Shortly.svg" alt="logo" />
         </a>
-        <nav className={`${isNavOpen ? 'open' : 'closed'}`}>
+        <nav className={`${isNavOpen ? "open" : "closed"}`}>
           <div className="left-nav">
-            <a href="/" className="link-nav">Features</a>
-            <a href="/" className="link-nav">Pricing</a>
-            <a href="/" className="link-nav">Ressources</a>
+            <a href="/" className="link-nav">
+              Features
+            </a>
+            <a href="/" className="link-nav">
+              Pricing
+            </a>
+            <a href="/" className="link-nav">
+              Ressources
+            </a>
           </div>
           <div className="right-nav">
-            <a href="/" className="link-nav login">Login</a>
-            <a href="/" className="link-nav sign-up">Sign Up</a>
+            <a href="/" className="link-nav login">
+              Login
+            </a>
+            <a href="/" className="link-nav sign-up">
+              Sign Up
+            </a>
           </div>
         </nav>
         <div className="toggle-menu" onClick={() => setIsNavOpen(!isNavOpen)}>
@@ -26,7 +36,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

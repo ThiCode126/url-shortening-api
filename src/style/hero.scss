@@ -1,7 +1,7 @@
 #hero {
   background-color: var(--white);
+  padding-bottom: 168px;
   .cw {
-    padding-bottom: 168px;
     .illustration {
       img {
         width: auto;
@@ -45,7 +45,7 @@
       display: flex;
       gap: 101px;
       flex-direction: row-reverse;
-      padding-bottom: 152px;
+      margin-bottom: 152px;
       .illustration {
         margin-right: -290px;
         img {

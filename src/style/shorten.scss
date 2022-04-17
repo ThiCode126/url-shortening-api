@@ -1,0 +1,162 @@
+#shorten {
+  margin-top: -80px;
+  .cw {
+    padding-bottom: 80px;
+    form {
+      padding: 24px;
+      background: var(--dark-violet) url("../../public/assets/bg-shorten-mobile.svg") no-repeat right top;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+
+      input.link {
+        width: 100%;
+        background-color: var(--white);
+        color: var(--dark);
+        border: 3px solid transparent;
+        border-radius: 5px;
+        padding-left: 16px;
+        @include pY(3px);
+        @include text(16px, 36px, 0.12px);
+        &.error {
+          border-color: var(--red-error);
+          color: var(--red-error);
+        }
+      }
+      .error-link {
+        @include mY(4px, 0);
+        color: var(--red-error);
+        font-style: italic;
+        @include text(12px, 18px, 0.0818182px);
+      }
+      button.shorten {
+        height: 48px;
+        @include flexCenter;
+        border-radius: 5px;
+        background-color: var(--primary);
+        color: var(--white);
+        font-weight: 700;
+        @include text(18px, 27px);
+        cursor: pointer;
+        border: none;
+        &:hover {
+          background-color: var(--primary-hover);
+        }
+      }
+    }
+    .display-links {
+      .shorten-card {
+        margin-top: 24px;
+        background-color: var(--white);
+        border-radius: 5px;
+        .card-header {
+          padding: 6px 16px;
+          border-bottom: 1px solid var(--grey025);
+          @include text(16px, 36px, 0.12px);
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .card-body {
+          padding: 6px 16px 8px;
+          a {
+            @include text(16px, 36px, 0.12px);
+            color: var(--primary);
+          }
+        }
+        .card-footer {
+          padding: 0 16px 16px;
+          button {
+            width: 100%;
+            font-weight: 700;
+            @include text(16px, 36px, 0.12px);
+            border-radius: 5px;
+            cursor: pointer;
+            &.copy {
+              background-color: var(--primary);
+              color: var(--white);
+              &:hover {
+                background-color: var(--primary-hover);
+              }
+            }
+            &.copied {
+              background-color: var(--dark-violet);
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #shorten {
+    margin-top: -84px;
+    .cw {
+      padding-bottom: 120px;
+      form {
+        padding: 52px 65px 26px 64px;
+        height: 168px;
+        background: var(--dark-violet) url("../../public/assets/bg-shorten-desktop.svg") no-repeat right top;
+        flex-direction: row;
+        align-items: normal;
+        gap: 24px;
+
+        input.link {
+          width: 769px;
+          border-radius: 10px;
+          padding-left: 32px;
+          @include pY(11px);
+          @include text(20px, 36px, 0.15px);
+        }
+        .error-link {
+          @include mY(8px, 0);
+          @include text(16px, 18px, 0.109091px);
+        }
+        button.shorten {
+          height: 64px;
+          width: 188px;
+          border-radius: 10px;
+          @include text(20px, 30px);
+        }
+      }
+      .display-links {
+        margin-top: 8px;
+        .shorten-card {
+          margin-top: 16px;
+          padding: 18px 24px 18px 32px;
+          display: grid;
+          grid-template-columns: auto auto 103px;
+          gap: 24px;
+          .card-header {
+            padding: 0;
+            border-bottom: none;
+            @include text(20px, 36px, 0.15px);
+          }
+          .card-body {
+            padding: 0;
+            justify-self: flex-end;
+            a {
+              @include text(20px, 36px, 0.1px);
+            }
+          }
+          .card-footer {
+            padding: 0;
+            button {
+              width: 103px;
+              @include pY(10px, 7px);
+              text-align: center;
+              @include text(15px, 22px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
