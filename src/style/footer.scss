@@ -1,0 +1,69 @@
+#footer {
+  background-color: var(--bg-black);
+  color: var(--white);
+  @include pY(54px, 56px);
+  text-align: center;
+  .cw {
+    .large-menu {
+      @include pY(49.3px, 48px);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .menu {
+        h5 {
+          @include mY(0, 22px);
+          font-weight: 700;
+          @include text(16px, 24px, -0.25px);
+        }
+        .body-menu {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          a {
+            text-decoration: none;
+            @include text(15px, 22px, -0.234375px);
+            color: var(--grey-link);
+            &:hover {
+              color: var(--primary);
+            }
+          }
+        }
+      }
+    }
+    .social {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      a {
+        &:hover {
+          path {
+            fill: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #footer {
+    @include pY(71px, 72px);
+    text-align: left;
+    .cw {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 101px;
+      .large-menu {
+        justify-self: end;
+        @include pY(0);
+        justify-content: space-between;
+        flex-direction: row;
+        width: 461px;
+        gap: 0;
+      }
+    }
+  }
+}
