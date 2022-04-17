@@ -29,11 +29,12 @@
 */
 @media (min-width: 1440px) {
   #hero {
-    // overflow: hidden;
+    padding-bottom: 152px;
     .cw {
       display: flex;
       gap: 101px;
       flex-direction: row-reverse;
+      align-items: center;
       margin-bottom: 152px;
       .illustration {
         margin-right: -290px;
